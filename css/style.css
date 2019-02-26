@@ -1,4 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
+<<<<<<< HEAD
     color: white;
     background-color: black;
     padding: 15%;
@@ -117,3 +124,117 @@ main img {
         margin-left: -30%;
     }
 }
+=======
+  color: white;
+  background-color: #f99dbb;
+  grid-area: header;
+  text-align: center;
+  padding: 10px;
+}
+main {
+  background-color: #9dcaf9;
+  grid-area: main;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav {
+  color: black;
+  background-color: gray;
+  grid-area: nav;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+aside {
+  background-color: #9df9b9;
+  grid-area: aside;
+  padding: 10px;
+  text-align: center;
+}
+.banner {
+  background-color: #9df9b9;
+  grid-area: banner;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer {
+  background-color: #f99dbb;
+  grid-area: footer;
+  text-align: center;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-align: center;
+  justify-content: space-around;
+}
+
+img {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'nav'
+    'main'
+    'aside'
+    'banner'
+    'footer';
+}
+
+@media (min-width: 500px) {
+  .container {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      'header  header'
+      'nav     nav'
+      'aside   main'
+      'banner  footer';
+  }
+  ul {
+    width: 200px;
+    justify-content: space-around;
+  }
+
+}
+
+@media (min-width: 700px) {
+  .container {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      'header header  header'
+      'nav    main    aside'
+      'nav    main    banner'
+      'footer footer  footer';
+  }
+
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+}
+>>>>>>> 896576c0443d7760f3659dd142f688d609f90ca7
