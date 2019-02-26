@@ -9,9 +9,9 @@ This project is for those first learning to code.
 1. Clone it to your computer.
 1. Once you open the project, you can edit it in your code editor. 
 1. To push up your changes:
-  * navigate to correct directory in your terminal
-  * type "git add {name of files}" and press enter
-  * type "git commit -m {message describing changes}"
-  * type "git push origin master"
+1. navigate to correct directory in your terminal
+1. type "git add {name of files}" and press enter
+1. type "git commit -m {message describing changes}"
+1. type "git push origin master"
 1. In your repo, go to "settings" and select host on github pages.
 1. Your project will appear at https://username.github.io/learn-to-code/
