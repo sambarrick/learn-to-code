@@ -1,141 +1,119 @@
 header {
     color: white;
-    background-color: #f99dbb;
+    background-color: black;
+    padding: 15%;
+    font-size: 300%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     grid-area: header;
     text-align: center;
-  }
-  main {
+    background-image: url(../img/superman.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    background-image: url("img/superman.jpg");
     background-color: #9dcaf9;
     grid-area: main;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  nav {
-    color :black;
-    background-color:gray;
+    padding: 5%;
+}
+
+nav {
+    color: black;
+    background-color: gray;
     grid-area: nav;
     padding: 10%;
     text-align: center;
-  }
-  aside {
-    background-color:#9df9b9;
+}
+
+aside {
+    background-color: #9df9b9;
     grid-area: aside;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 10%;
     text-align: center;
-  }
-  .banner {
-    background-color:#9df9b9;
+}
+
+.banner {
+    background-color: #9df9b9;
     grid-area: banner;
     padding-left: 5%;
     padding-right: 5%;
-  }
-  footer {
-    background-color:#f99dbb;
+}
+
+footer {
+    background-color: #f99dbb;
     grid-area: footer;
     text-align: center;
     padding: 10px;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  li {
-    text-align: center;
-    justify-content: space-around;
 }
 
-  .active {
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav li {
+    float: left;
+    padding: 5px;
+}
+
+.active {
     background-color: #4CAF50;
 }
 
-  img {
-      width: 100%;
-      margin: auto;
-  }
-  
-  main img {
+img {
+    width: 100%;
+    margin: auto;
+}
+
+main img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
 
-
-
-  .container {
+.container {
     display: grid;
-    grid-template-areas: 
-      "header"
-      "nav"
-      "main"
-      "aside"
-      "banner"
-      "footer";
-     }
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "banner"
+        "footer";
+}
 
-  @media (min-width: 500px) {
+@media (min-width: 500px) {
     .container {
-      grid-template-columns: 1fr 3fr;
-      grid-template-areas: 
-        "header  header"
-        "nav     nav"
-        "aside   main"
-        "banner  footer";
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "header  header"
+            "nav     nav"
+            "aside   main"
+            "banner  footer";
     }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        justify-content: space-around;
-      }
-      
-      li {
-        text-align: center;
-        justify-content: space-around;
-      }
-  }
-  
-  @media (min-width: 700px) {
+    nav li {
+        float: none;
+        margin-left: -10%;
+    }
+}
+
+@media (min-width: 700px) {
     .container {
-      grid-template-columns: 1fr 4fr 1fr;
-      grid-template-areas: 
-        "header header  header"
-        "nav    main    aside"
-        "nav    main    banner"
-        "footer footer  footer"
-     }
-     ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 200px;
-      }
-      
-      li a {
-        display: block;
-        color: #000;
-        padding: 8px 16px;
-        text-decoration: none;
-      }
-      
-      li {
-        text-align: center;
-      }
-      
-      li:last-child {
-        border-bottom: none;
-      }
-      
-      li a.active {
-        background-color: #4CAF50;
-        color: white;
-      }
-      
-      li a:hover:not(.active) {
-        background-color: #555;
-        color: white;
-      }
-  }
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+            "header header  header"
+            "nav    main    aside"
+            "nav    main    banner"
+            "footer footer  footer"
+    }
+    nav li {
+        float: none;
+        margin-left: -30%;
+    }
+}
